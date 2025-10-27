@@ -1,5 +1,5 @@
-# code_profiling
-C4L class activity for profiling code
+# Code Profiling
+C4L class activity for profiling code in Python and R
 
 Today, we'll walk through exercises to perform code profiling in Python and R using a set of examples I've modified from a [workshop presented by Princeton Research Computing](https://github.com/PrincetonUniversity/intro_debugging).
 
@@ -10,3 +10,9 @@ Before class, you should have installed the following programs on your computer:
 3. [Pycharm](https://www.jetbrains.com/pycharm/data-science/?var=anaconda)
 
 
+With all of these tools installed, you'll be ready for the workshop.
+
+# Getting started
+First, you'll need the files for today's activity, which are contained in this repo. In Terminal, navigate to a location where you want to store these files (say ```~/Desktop```) and run ```git clone https://github.com/genevalab/code_profiling/``` to clone this repository.
+
+Now, ```cd``` into the newly created ```code_profiling``` directory ```cd code_profiling```. I've created what should be a pretty minimal conda environment for today. The  
