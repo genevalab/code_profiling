@@ -46,14 +46,38 @@ In the source directory you will see a search.py that contains three different s
 
 ```python search.py simple_search```
 
-# Profiling runtime
+
+## Profiling runtime by operation
 
 ```python -m cProfile -s tottime search.py sort_search```
 
 
 
+## Visualizing
+
+```
+python -m cProfile -o search_stats.pstats search.py sort_search
+snakeviz search_stats.pstats
+```
+
+## Profiling runtime by line
 
 
+kernprof -l search.py sort_search
 
- python search.py better_search
+python -m line_profiler -rmt search.py.lprof
+
+
+## Profiling memory by funtion
+
+To profile the memory use of a function decorate it by adding ```@profile``` to the line immeadiately above the function. For example, I've added ```@profile``` to the line above better search in the screenshot below.
+<img width="856" height="237" alt="image" src="https://github.com/user-attachments/assets/06c4f3df-530a-4d26-8d62-950e74edbcd1" />
+
+To profile memory use of that function, run:
+
+```
+python -m memory_profiler  search.py better_search
+```
+
+
  
