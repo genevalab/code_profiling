@@ -46,6 +46,12 @@ In the source directory you will see a search.py that contains three different s
 
 ```python search.py simple_search```
 
+# Profiling runtime
+
+```python -m cProfile -s tottime search.py sort_search```
+
+
+
 
 
 
