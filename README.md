@@ -51,22 +51,17 @@ In the source directory you will see a search.py that contains three different s
 
 ```python -m cProfile -s tottime search.py sort_search```
 
-
+Try this for each of the functions.
+### Questions: Which function takes the longest to execute? What elements of each function are taking the bulk of the time to process?
 
 ## Visualizing
+
+While the text output is details, it can be quite long. Snakeviz generated HTML-based interactive visualization tools to track profiling times.
 
 ```
 python -m cProfile -o search_stats.pstats search.py sort_search
 snakeviz search_stats.pstats
 ```
-
-## Profiling runtime by line
-
-
-kernprof -l search.py sort_search
-
-python -m line_profiler -rmt search.py.lprof
-
 
 ## Profiling memory by funtion
 
@@ -76,8 +71,10 @@ To profile the memory use of a function decorate it by adding ```@profile``` to 
 To profile memory use of that function, run:
 
 ```
-python -m memory_profiler  search.py better_search
+python -m memory_profiler search.py better_search
 ```
+Which gives the following output:
+<img width="856" height="253" alt="image" src="https://github.com/user-attachments/assets/c052db2d-4c5c-4e97-b29b-ff476f55ee06" />
 
-
+### Question: Which function uses the most memory?
  
