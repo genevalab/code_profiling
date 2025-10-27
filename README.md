@@ -7,7 +7,7 @@ Before class, you should have installed the following programs on your computer:
 
 1. R and RStudio (instructions for both on [this page](https://posit.co/download/rstudio-desktop/))
 2. [Anaconda](https://www.anaconda.com/docs/getting-started/anaconda/install)
-3. [Pycharm](https://www.jetbrains.com/pycharm/data-science/?var=anaconda)
+3. [PyCharm](https://www.jetbrains.com/pycharm/data-science/?var=anaconda)
 
 
 With these tools installed, you'll be ready for the workshop.
@@ -30,12 +30,12 @@ if all looks good, you can deactivate for now:
 
 ```conda deactivate```
 
-## Set up pycharm project
-1. Open pycharm, and go to File>New Project....
+## Set up PyCharm project
+1. Open PyCharm, and go to File>New Project....
 2. Select the ```python_profile``` directory for the Location
 3. For Environment, click "Select Existing"
 4. For Type, select "Conda"
-5. Then in the bottom Envirnment dropdown, select "python_profile"
+5. Then, in the bottom Environment dropdown, select "python_profile"
 6. Click Create
 7. Finally, go to PyCharm>Settings>Project Structure and click the "+" to Add Content Root, and select the ```src" directory.
 
@@ -48,9 +48,9 @@ In the source directory you will see a script ```search.py``` that contains thre
 
 
 ## Profiling runtime by operation
-To investigate the breakdown of runtime for each function we'll use cProfile. The cProfile module is a built-in deterministic profiler used to measure the execution time of Python programs. It tracks how many times and how long each function is called, providing detailed statistics about the performance of your code. This helps identify bottlenecks and optimize code efficiency.
+To investigate the breakdown of runtime for each function, we'll use cProfile. The cProfile module is a built-in deterministic profiler used to measure the execution time of Python programs. It tracks how many times and how long each function is called, providing detailed statistics about the performance of your code. This helps identify bottlenecks and optimize code efficiency.
 
-Try running cProfile with each function using the command below (and substituting other function names at the end in the place of ```sort_search```). This command sorts the output by runtime so scroll up to see the longest running parts.
+Try running cProfile with each function using the command below (and substituting other function names at the end in the place of ```sort_search```). This command sorts the output by runtime, so scroll up to see the longest running parts.
 
 ```python -m cProfile -s tottime search.py sort_search```
 
@@ -58,7 +58,7 @@ Try running cProfile with each function using the command below (and substitutin
 
 ## Visualizing
 
-While the text output is detailed, it can be quite long and hard to parse. Snakeviz generates HTML-based interactive visualization tools to track profiling times. Run cProfile again, this time creating  ```.pstats``` output files that can then be plotting using snakeviz. Do this for each of the three functions.
+While the text output is detailed, it can be quite long and hard to parse. Snakeviz generates HTML-based interactive visualization tools to track profiling times. Run cProfile again, this time creating  ```.pstats``` output files that can then be plotted using snakeviz. Do this for each of the three functions.
 
 ```
 python -m cProfile -o sort_search_stats.pstats search.py sort_search
@@ -68,10 +68,10 @@ snakeviz sort_search_stats.pstats
 
 ## Profiling memory use by function
 
-To profile the memory use of a function decorate it by adding ```@profile``` to the line immeadiately above the function. For example, I've added ```@profile``` to the line above better search in the screenshot below.
+To profile the memory use of a function, decorate it by adding ```@profile``` to the line immediately above the function. For example, I've added ```@profile``` to the line above, better search in the screenshot below.
 <img width="856" height="237" alt="image" src="https://github.com/user-attachments/assets/06c4f3df-530a-4d26-8d62-950e74edbcd1" />
 
-To profile memory use of that function, run:
+To profile the memory use of that function, run:
 
 ```
 python -m memory_profiler search.py better_search
@@ -83,11 +83,11 @@ Which gives the following output:
 
 # Profiling R code
 
-We'll do our R code profiling in RStudio. Open up the app then got to Session>Set Working Directory and select ```/code_profiling/R_profile/``` as your working directory. You should see two scripts ```mbm_examples.R``` and ```profviz_examples.R``` in the Files pane of RStudio. Click on each to open the scripts (usually these will appear in the upper right pane, with a tab for each script.
+We'll do our R code profiling in RStudio. Open up the app, then go to Session>Set Working Directory and select ```/code_profiling/R_profile/``` as your working directory. You should see two scripts ```mbm_examples.R``` and ```profviz_examples.R``` in the Files pane of RStudio. Click on each to open the scripts (usually these will appear in the upper right pane, with a tab for each script.
 
 Run the first two lines of ```mbm_examples.R``` to install any R packages you will need run the scripts. 
 
-Now Run the code down to line 37 to run MicroBenchMark, which will generate a text outout of run times for each of four different sorting techniques. Microbenchmark runs each function multiple times (in this example 50) to give a mean and distribution of run times.  Run the next example to compare three different methods of querying and summarizing tabular data (base R, SQL, and dplyr). 
+Now run the code down to line 37 to run MicroBenchMark, which will generate a text output of run times for each of four different sorting techniques. Microbenchmark runs each function multiple times (in this example 50) to give a mean and distribution of run times.  Run the next example to compare three different methods of querying and summarizing tabular data (base R, SQL, and dplyr). 
 
 While this is useful information, it doesn't help us understand what elements of each option are influencing runtime.
 
@@ -95,7 +95,7 @@ Switch over to ```profviz_examples.R``` for a graphical approach to profiling R 
 
 Run everything down through line 21. You should see a new interactive plot appear. It goes to the top right pane for me.
 
-## Look over the profvis output. Where is most time spent in this sorting script?
+### Look over the profvis output. Where is most time spent in this sorting script?
 
 Now run the remaining lines of the script and visualize the profile for a snail sorting algorithm. Where is most of the time in that script spent?
 
