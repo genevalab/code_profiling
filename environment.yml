@@ -1,0 +1,18 @@
+name: python_profile
+channels:
+  - defaults
+dependencies:
+  - openssl
+  - pip
+  - python==3.12
+  - setuptools
+  - sqlite
+  - wheel
+  - zlib
+  - pip:
+    - memory-profiler
+    - numpy
+    - pandas
+    - pytest
+    - line_profiler
+    - snakeviz
