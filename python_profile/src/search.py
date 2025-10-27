@@ -23,7 +23,6 @@ def sort_search(search_list, query):
     sorted_list = snail_sort(search_list)
     return simple_search(sorted_list, query)
 
-@profile
 def better_search(search_list, query):
     sorted_list = snail_sort(search_list)
     first = 0
@@ -39,7 +38,6 @@ def better_search(search_list, query):
                 first = mid + 1
     return False
 
-@profile
 def list_searching(search_list, query_list, search_func):
     found_ctr = 0
     search_list.sort()
