@@ -51,7 +51,7 @@ In the source directory you will see a script ```search.py``` that contains thre
 ## Profiling runtime by operation
 To investigate the breakdown of runtime for each function, we'll use cProfile. The cProfile module is a built-in deterministic profiler used to measure the execution time of Python programs. It tracks how many times and how long each function is called, providing detailed statistics about the performance of your code. This helps identify bottlenecks and optimize code efficiency.
 
-Try running cProfile with each function using the command below (and substituting other function names at the end in the place of ```sort_search```). This command sorts the output by runtime, so scroll up to see the longest running parts.
+Try running cProfile with each function using the command below (and substituting other function names at the end in the place of ```sort_search``` - e.g. also run ```better_search```, and ```simple_search```.). This command sorts the output by runtime, so scroll up to see the longest running parts.
 
 ```python -m cProfile -s tottime search.py sort_search```
 
