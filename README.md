@@ -42,7 +42,7 @@ if all looks good, you can deactivate for now:
 You should be all set to start profiling!
 
 # Profiling some code
-In the source directory you will see a search.py that contains three different search functions ```simple_search```, ```sort_search```, and ```best_search```. Test them out by running them in the PyCharm terminal. For example:
+In the source directory you will see a search.py that contains three different search functions ```sort_search```, ```better_search```, and ```simple_search```. Test them out by running them in the PyCharm terminal. For example:
 
 ```python search.py simple_search```
 
