@@ -37,7 +37,8 @@ if all looks good, you can deactivate for now:
 4. For Type, select "Conda"
 5. Then, in the bottom Environment dropdown, select "python_profile"
 6. Click Create
-7. Finally, go to PyCharm>Settings>Project Structure and click the "+" to Add Content Root, and select the ```src" directory.
+7. Finally, go to the menu at the top of the screen and select PyCharm>Settings>Project Structure and click the "+" to Add Content Root, and select the ```src" directory.
+   Note: You may get an error here if it does not allow you to select a nested directory. Click the X next to the existing Content root to remove it, and then you should be able to choose ```src```.
 
 You should be all set to start profiling!
 
