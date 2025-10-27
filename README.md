@@ -15,7 +15,10 @@ With all of these tools installed, you'll be ready for the workshop.
 # Getting started
 First, you'll need the files for today's activity, which are contained in this repo. In Terminal, navigate to a location where you want to store these files (say ```~/Desktop```) and run ```git clone https://github.com/genevalab/code_profiling/``` to clone this repository.
 
-Now, ```cd``` into the newly created ```code_profiling``` directory ```cd code_profiling```. I've created what should be a pretty minimal conda environment for today. Create the environment by running:
+Now, ```cd``` into the newly created ```code_profiling``` directory ```cd code_profiling```. 
+
+## Setting up today's conda environment
+I've created what should be a pretty minimal conda environment for today. Create the environment by running:
 
 ```conda env create -f environment.yml```
 
@@ -27,7 +30,6 @@ if all looks good, you can deactivate for now:
 
 ```conda deactivate```
 
-
 ## Set up pycharm project
 1. Open pycharm, and go to File>New Project....
 2. Select the ```python_profile``` directory for the Location
@@ -35,5 +37,17 @@ if all looks good, you can deactivate for now:
 4. For Type, select "Conda"
 5. Then in the bottom Envirnment dropdown, select "python_profile"
 6. Click Create
+7. Finally, go to PyCharm>Settings>Project Structure and click the "+" to Add Content Root, and select the ```src" directory.
 
-   
+You should be all set to start profiling!
+
+# Profiling some code
+In the source directory you will see a search.py that contains three different search functions ```simple_search```, ```sort_search```, and ```best_search```. Test them out by running them in the PyCharm terminal. For example:
+
+```python search.py simple_search```
+
+
+
+
+ python search.py better_search
+ 
